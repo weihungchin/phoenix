@@ -1,0 +1,24 @@
+<div>
+  <ul>
+    <div *ngFor="let course of dataObs | async">
+
+      <h3>
+        <a href="#">{{course.title}}</a>
+      </h3>
+      <p>{{course.description}}</p>
+      <div>
+        <a href="{{course.url}}" target="_blank" class="btn btn-danger">Go To Course</a>
+      </div>
+
+    </div>
+
+    <div *ngIf="ngFireAuth.authState | async as user; else showLogin">
+      <h1>Hello {{ user.displayName }}!</h1>
+      <button (click)="logout()">Logout</button>
+    </div>
+    <ng-template #showLogin>
+      <p>Please login.</p>
+      <button (click)="login()">Login with Google</button>
+    </ng-template>
+  </ul>
+</div>

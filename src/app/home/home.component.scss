@@ -1,0 +1,29 @@
+mat-toolbar {
+  justify-content: space-between;
+}
+
+.toolbar-spacer{
+  flex:1 1 auto;
+  -ms-flex:1 1 auto;
+}
+.title-spacer{
+  flex:1 1 auto;
+}
+
+.snav-container {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
+
+mat-sidenav {
+  width: 250px;
+}
+.sidenav-container{
+    margin:0 20px;
+}

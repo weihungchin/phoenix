@@ -1,0 +1,75 @@
+<div>
+  <mat-toolbar color="primary">
+    <span>
+      <button  mat-icon-button (click)="snav.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+    </span>
+
+    <span class="title-spacer"></span>
+    <span>Yay, Material in Angular!</span>
+
+    <span class="toolbar-spacer"></span>
+    <button mat-icon-button>
+      <mat-icon>notifications</mat-icon>
+    </button>
+    <button mat-icon-button [mat-menu-trigger-for]="menu">
+        <mat-icon>more_vert</mat-icon>
+    </button>
+  </mat-toolbar>
+  <mat-menu x-position="before" #menu="matMenu">
+    <button mat-menu-item>Option 1</button>
+    <button mat-menu-item>Option 2</button>
+  </mat-menu>
+
+  <mat-sidenav-container class="snav-container" [style.marginTop.px]="mobQuery.matches ? 56 : 64">
+    <mat-sidenav #snav [mode]="mobQuery.matches? 'over':'side'" [opened]="!mobQuery.matches">
+      <mat-nav-list>
+        <button mat-menu-item>
+          <mat-icon>assignment ind
+          </mat-icon>Dashboard</button>
+
+        <button mat-menu-item>
+          <mat-icon>person_pin
+          </mat-icon>Applicants</button>
+
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <div class="sidenav-container">
+        <mat-tab-group>
+          <mat-tab label="New">
+            <app-common-table [data] = "applicantsData" [isLoading] = "isLoading"></app-common-table>
+          </mat-tab>
+          <mat-tab label="Accepted">
+            <div>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue. Phasellus volutpat neque ac dui mattis
+              vulputate. Etiam consequat aliquam cursus. In sodales pretium ultrices. Maecenas lectus est, sollicitudin consectetur
+              felis nec, feugiat ultricies mi. Aliquam erat volutpat. Nam placerat, tortor in ultrices porttitor, orci enim
+              rutrum enim, vel tempor sapien arcu a tellus.
+            </div>
+          </mat-tab>
+          <mat-tab label="Rejected">
+            <div>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue. Phasellus volutpat neque ac dui mattis
+              vulputate. Etiam consequat aliquam cursus. In sodales pretium ultrices. Maecenas lectus est, sollicitudin consectetur
+              felis nec, feugiat ultricies mi. Aliquam erat volutpat. Nam placerat, tortor in ultrices porttitor, orci enim
+              rutrum enim, vel tempor sapien arcu a tellus.
+            </div>
+          </mat-tab>
+
+          <mat-tab label="All">
+
+          </mat-tab>
+          <!-- <mat-tab label="Rejected" disabled>
+              No content  
+            </mat-tab> -->
+        </mat-tab-group>
+      </div>
+
+
+
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+
+</div>
