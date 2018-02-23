@@ -44,10 +44,11 @@ export class UserService {
     );
   }
 
-  purgeAuth() {
-    this.logout().subscribe(res => {
+  purgeAuth(): Observable<any> {
+   return this.logout().map(res => {
       this.currentUserSubject.next(new User());
       this.isAuthenticatedSubject.next(false);
+      return res;
     });
   }
 

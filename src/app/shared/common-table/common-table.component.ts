@@ -21,6 +21,7 @@ export class CommonTableComponent implements OnInit, AfterViewInit {
   displayedColumns = ["name", "mobile", "email", "action"];
   dataSource: MatTableDataSource<UserData>;
   isLoadingResults = true;
+  pageSize:number = 10;
 
   sample = {
     key: "id"
@@ -77,6 +78,7 @@ export class CommonTableComponent implements OnInit, AfterViewInit {
     filterValue = filterValue.trim(); // Remove whitespace
     filterValue = filterValue.toLowerCase(); // Datasource defaults to lowercase matches
     this.dataSource.filter = filterValue;
+    console.log(this.dataSource);
   }
 }
 

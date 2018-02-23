@@ -16,8 +16,8 @@ import {
 export class AppComponent {
   title = "app";
   constructor(private userService: UserService, private router: Router) {
-    this.userService.attemptAuth();
-    this.subscToRouterEvent();
+     this.userService.attemptAuth();
+     this.subscToRouterEvent();
   }
 
   private subscToRouterEvent() {
@@ -29,7 +29,6 @@ export class AppComponent {
       // console.log(e);
     }
     if (e instanceof NavigationError) {
-      // redirect to 404 page;
       console.log(e);
       this.router.navigateByUrl('404');
     }

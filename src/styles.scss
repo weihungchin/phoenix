@@ -1,25 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~bootstrap/dist/css/bootstrap.css";
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
-@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url("https://fonts.googleapis.com/css?family=Roboto");
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
 
-$accentColor:#ff4081;
-$lightGrey: #CDCDCD;
+$accentColor: #ff4081;
+$lightGrey: #cdcdcd;
 
-body{
-    font-family: 'Roboto', sans-serif;
+body {
+  font-family: "Roboto", sans-serif;
 }
 
-button:focus{
-    outline:none;
+button:focus {
+  outline: none;
 }
 
 html {
   height: 100%;
 }
 
-.error-snackbar{
-    color: rgba(211, 14, 14, 0.8);
-    background-color:$lightGrey;
+.error-snackbar {
+  color: rgba(211, 14, 14, 0.8);
+  background-color: $lightGrey;
+}
+
+.spinner-container {
+  margin: 15px auto;
 }

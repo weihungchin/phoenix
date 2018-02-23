@@ -76,7 +76,7 @@ import { Router, ActivatedRoute } from "@angular/router";
       ),
       transition(
         "done => start",
-        animate("0.3s 0s ease-in"),
+        animate("0.5s 0s ease-in"),
       )
     ])
   ]

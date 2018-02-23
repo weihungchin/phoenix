@@ -19,9 +19,11 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { MatProgressSpinnerModule } from "@angular/material/progress-spinner";
 import { NotFoundComponent } from "@app/shared/not-found/not-found.component";
 import { ServiceWorkerModule } from "@angular/service-worker";
+import { LandingModule } from "@app/landing";
 
 const rootRoute = RouterModule.forRoot(
   [
+   
     { path: "login", component: LoginComponent },
     {
       path: "home",
@@ -36,7 +38,6 @@ const rootRoute = RouterModule.forRoot(
 @NgModule({
   declarations: [AppComponent, TestBenchComponent, LoginComponent],
   imports: [
-    CommonModule,
     BrowserModule,
     environment.production
       ? ServiceWorkerModule.register("/ngsw-worker.js", {
@@ -44,9 +45,7 @@ const rootRoute = RouterModule.forRoot(
         })
       : [],
     BrowserAnimationsModule,
-    AngularFireAuthModule,
-    AngularFireModule.initializeApp(environment.firebase),
-    AngularFireDatabaseModule,
+    LandingModule,
     rootRoute,
     SharedModule
   ],

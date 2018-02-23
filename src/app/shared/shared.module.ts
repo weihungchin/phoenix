@@ -17,7 +17,10 @@ import {
   MatTabsModule,
   MatTableModule,
   MatPaginatorModule,
-  MatSortModule
+  MatSortModule,
+  MatExpansionModule,
+  MatCardModule,
+  MatSelectModule
 } from "@angular/material";
 import { CommonTableComponent } from "./common-table/common-table.component";
 
@@ -38,9 +41,13 @@ import { CommonTableComponent } from "./common-table/common-table.component";
     MatTabsModule,
     MatTableModule,
     MatPaginatorModule,
-    MatSortModule
+    MatSortModule,
+    MatExpansionModule,
+    MatCardModule,
+    MatSelectModule
   ],
   exports: [
+    CommonModule,
     MatInputModule,
     MatButtonModule,
     MatProgressSpinnerModule,
@@ -58,7 +65,10 @@ import { CommonTableComponent } from "./common-table/common-table.component";
     MatTableModule,
     CommonTableComponent,
     MatPaginatorModule,
-    MatSortModule
+    MatSortModule,
+    MatExpansionModule,
+    MatCardModule,
+    MatSelectModule
   ],
   declarations: [ShowAuthedDirective, NotFoundComponent, CommonTableComponent],
   providers: []

@@ -22,8 +22,17 @@ mat-toolbar {
 }
 
 mat-sidenav {
-  width: 250px;
+  width: 180px;
+  background-color:rgb(25, 33, 43);
+  color:#fff;
 }
+
+mat-nav-list {
+  color:#fff;
+}
+
+
+
 .sidenav-container{
     margin:0 20px;
 }
